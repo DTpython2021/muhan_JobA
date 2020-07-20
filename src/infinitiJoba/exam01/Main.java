@@ -8,6 +8,10 @@ public class Main {
 		new GamePaly();	
 		
 		
+		
+		
+		
+		//test
 		//test
 		
 	}
