@@ -5,7 +5,11 @@ public class Main {
 	public static final int SCREEN_HEIGHT = 720;
 	
 	public static void main(String[] args) {
-		new GamePaly();		
+		new GamePaly();	
+		
+		
+		//test
+		
 	}
 
 }
