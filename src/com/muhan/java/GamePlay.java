@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+//20200721
+
 public class GamePlay extends JFrame {
 
 	private Image screenImage;
@@ -106,7 +108,7 @@ public class GamePlay extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonPressedMusic = new Music("incorrect.mp3", false);
 				buttonPressedMusic.start();
-				//°ÔÀÓ½ÃÀÛÀÌº¥Æ®
+				//ê²Œì„ì‹œì‘ì´ë²¤íŠ¸
 				Button1.setVisible(false);
 				Button2.setVisible(false);
 				Button3.setVisible(false);
@@ -138,7 +140,7 @@ public class GamePlay extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonPressedMusic = new Music("incorrect.mp3", false);
 				buttonPressedMusic.start();
-				//°ÔÀÓ½ÃÀÛÀÌº¥Æ®
+				//ê²Œì„ì‹œì‘ì´ë²¤íŠ¸
 				Button1.setVisible(false);
 				Button2.setVisible(false);
 				Button3.setVisible(false);
@@ -170,7 +172,7 @@ public class GamePlay extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonPressedMusic = new Music("incorrect.mp3", false);
 				buttonPressedMusic.start();
-				//°ÔÀÓ½ÃÀÛÀÌº¥Æ®
+				//ê²Œì„ì‹œì‘ì´ë²¤íŠ¸
 				Button1.setVisible(false);
 				Button2.setVisible(false);
 				Button3.setVisible(false);
@@ -202,7 +204,7 @@ public class GamePlay extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonPressedMusic = new Music("incorrect.mp3", false);
 				buttonPressedMusic.start();
-				//°ÔÀÓ½ÃÀÛÀÌº¥Æ®
+				//ê²Œì„ì‹œì‘ì´ë²¤íŠ¸
 				Button1.setVisible(false);
 				Button2.setVisible(false);
 				Button3.setVisible(false);
