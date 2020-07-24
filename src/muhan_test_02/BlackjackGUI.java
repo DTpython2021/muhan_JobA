@@ -158,7 +158,8 @@ public class BlackjackGUI extends Canvas implements ActionListener {
 			
 		} else if (e.getSource().equals(BlackjackGUIRunner.exit)) {
 			new GamePlay();
-			System.exit(0);
+//			BlackjackGUI.destroy();
+//			System.exit(0);
 		
 		} else if (e.getSource().equals(BlackjackGUIRunner.stand)) {
 			System.out.println("You pressed stand");
