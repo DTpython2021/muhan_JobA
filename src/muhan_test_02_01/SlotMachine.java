@@ -13,6 +13,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
+
+import muhan_test_02.Main;
+
 public class SlotMachine extends Applet implements Runnable, ActionListener {
 	public static final int SCREEN_WIDTH = 780;
 	public static final int SCREEN_HEIGHT = 1200;
@@ -35,6 +39,7 @@ public class SlotMachine extends Applet implements Runnable, ActionListener {
 	boolean[] moveSlot;
 	
 	Button startButton, stopButton, homeButton;
+	private ImageIcon exitButtonImage = new ImageIcon(Main.class.getResource("../image/exitButton.png"));
 //	Panel buttonPanel;
 	GridLayout grid = new GridLayout(3, 1);
 	Panel buttonPanel = new Panel(grid);
@@ -53,10 +58,10 @@ public class SlotMachine extends Applet implements Runnable, ActionListener {
 		// 이미지 로드
 		MediaTracker tracker = new MediaTracker(this);
 		
-		slot = Toolkit.getDefaultToolkit().getImage("D:\\abc\\1.game\\Slot\\slotsymbol7777.png");
+		slot = Toolkit.getDefaultToolkit().getImage("C:\\Users\\KIM HYUNJI\\git\\test01\\src\\image\\slotsymbol7777.png");
 		tracker.addImage(slot,  0);
 		
-		machine = Toolkit.getDefaultToolkit().getImage("D:\\abc\\1.game\\Slot\\slotmachine_200721.png"); //투명한 이미지 사용할 것!
+		machine = Toolkit.getDefaultToolkit().getImage("C:\\Users\\KIM HYUNJI\\git\\test01\\src\\image\\slotmachine_200721.png"); //투명한 이미지 사용할 것!
 		tracker.addImage(machine, 0);
 
 //		// 배경 음악
