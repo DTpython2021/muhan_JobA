@@ -1,7 +1,6 @@
 package muhan_test_02;
 
 import java.awt.Color;
-
 import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -21,8 +20,23 @@ public class DynamicBeat_Bingo_two extends JFrame {
 	private Image screenImage;
 	private Graphics screenGraphic;
 	private ImageIcon bingoImage = new ImageIcon(Main.class.getResource("../image/bingo150.png"));
-	private ImageIcon winbingoImage = new ImageIcon(Main.class.getResource("../image/win_bingo.png"));
+	private ImageIcon bingoImage2 = new ImageIcon(Main.class.getResource("../image/bingo2_150.png"));
+	
+	private ImageIcon winbingoImage2 = new ImageIcon(Main.class.getResource("../image/WIN_BLUE.png"));
+	private ImageIcon winbingoImage = new ImageIcon(Main.class.getResource("../image/WIN_RED.png"));
+	private ImageIcon againButtonImage = new ImageIcon(Main.class.getResource("../image/againButton1.png"));
 //	private ImageIcon bingoImage = new ImageIcon(Main.class.getResource("../image/bingo1.png"));
+
+//	private ImageIcon b1Image = new ImageIcon(Main.class.getResource("../image/h1.png"));
+//	private ImageIcon b2Image = new ImageIcon(Main.class.getResource("../image/h2.png"));
+//	private ImageIcon b3Image = new ImageIcon(Main.class.getResource("../image/h3.png"));
+//	private ImageIcon b4Image = new ImageIcon(Main.class.getResource("../image/h4.png"));
+//	private ImageIcon b5Image = new ImageIcon(Main.class.getResource("../image/h5.png"));
+//	private ImageIcon b6Image = new ImageIcon(Main.class.getResource("../image/h6.png"));
+//	private ImageIcon b7Image = new ImageIcon(Main.class.getResource("../image/g7.png"));
+//	private ImageIcon b8Image = new ImageIcon(Main.class.getResource("../image/g8.png"));
+//	private ImageIcon b9Image = new ImageIcon(Main.class.getResource("../image/g9.png"));
+
 	private ImageIcon b1Image = new ImageIcon(Main.class.getResource("../image/g1.png"));
 	private ImageIcon b2Image = new ImageIcon(Main.class.getResource("../image/g2.png"));
 	private ImageIcon b3Image = new ImageIcon(Main.class.getResource("../image/g3.png"));
@@ -44,11 +58,22 @@ public class DynamicBeat_Bingo_two extends JFrame {
 	private ImageIcon n8Image = new ImageIcon(Main.class.getResource("../image/n8.png"));
 	private ImageIcon n9Image = new ImageIcon(Main.class.getResource("../image/n9.png"));
 		
+	///222222222222222222222222222222222222222222222222
+	private ImageIcon n1Image2 = new ImageIcon(Main.class.getResource("../image/c1.png"));
+	private ImageIcon n2Image2 = new ImageIcon(Main.class.getResource("../image/c2.png"));
+	private ImageIcon n3Image2 = new ImageIcon(Main.class.getResource("../image/c3.png"));
+	private ImageIcon n4Image2 = new ImageIcon(Main.class.getResource("../image/c4.png"));
+	private ImageIcon n5Image2 = new ImageIcon(Main.class.getResource("../image/c5.png"));
+	private ImageIcon n6Image2 = new ImageIcon(Main.class.getResource("../image/c6.png"));
+	private ImageIcon n7Image2 = new ImageIcon(Main.class.getResource("../image/c7.png"));
+	private ImageIcon n8Image2 = new ImageIcon(Main.class.getResource("../image/c8.png"));
+	private ImageIcon n9Image2 = new ImageIcon(Main.class.getResource("../image/c9.png"));
+
 	private ImageIcon exitButtonImage = new ImageIcon(Main.class.getResource("../image/exitButton.png"));
 	private ImageIcon exitEnteredButtonImage = new ImageIcon(Main.class.getResource("../image/exitEnteredButton.png"));
 	private ImageIcon quitButtonBasicImage = new ImageIcon(Main.class.getResource("../image/quitButtonBasic.png"));
 	private ImageIcon quitButtonEnteredImage = new ImageIcon(Main.class.getResource("../image/quitButtonEntered.png"));
-	private Image Background = new ImageIcon(Main.class.getResource("../image/bingobackground.png")).getImage();
+	private Image Background = new ImageIcon(Main.class.getResource("../image/background_bingo.png")).getImage();
 	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../image/titleBar.png")));
 	private JButton exitButton = new JButton(exitButtonImage);
 
@@ -59,9 +84,12 @@ public class DynamicBeat_Bingo_two extends JFrame {
 	private JButton[][] button2 = new JButton[3][3];   //  선택될  3 X 3 화면용
 	
 	private JButton winBingo = new JButton(winbingoImage);   // 빙고가 성립될때 띄울 화면
-	private JButton winBingo2 = new JButton(winbingoImage);   // 빙고가 성립될때 띄울 화면
+	private JButton winBingo2 = new JButton(winbingoImage2);   // 빙고가 성립될때 띄울 화면
 	
 	private JButton quitButton = new JButton(quitButtonBasicImage);
+	
+	private JButton againButton = new JButton(againButtonImage);   // 초기화  == 빙고 다시시작
+	
 	private int mouseX,mouseY;
 	private boolean isMainScreen = false;
 	
@@ -88,7 +116,7 @@ public class DynamicBeat_Bingo_two extends JFrame {
 		setLayout(null);
 		
 		// 빙고 세레머니화면
-		
+		//11111111111111111111111111111111111111111111111
 		winBingo.setBounds(488, 215, 300, 300); 
 		winBingo.setBorderPainted(false);
 		winBingo.setContentAreaFilled(false);
@@ -97,11 +125,12 @@ public class DynamicBeat_Bingo_two extends JFrame {
 		add(winBingo);                           // 빙고 세레머니화면 추가
 		winBingo.setVisible(false);              // 빙고 세레머니화면 초기에 언비지블
 
+		//222222222222222222222222222222222222222222
 		winBingo2.setBounds(488, 215, 300, 300); 
 		winBingo2.setBorderPainted(false);
 		winBingo2.setContentAreaFilled(false);
 		winBingo2.setFocusPainted(false);
-		winBingo2.setIcon(winbingoImage);
+		winBingo2.setIcon(winbingoImage2);
 		add(winBingo2);                           // 빙고 세레머니화면 추가
 		winBingo2.setVisible(false);              // 빙고 세레머니화면 초기에 언비지블
 //		for(int i =  1; i < 10 ; i++)
@@ -110,6 +139,7 @@ public class DynamicBeat_Bingo_two extends JFrame {
 //				
 //		}
 
+		//1111111111111111111111111111111111111111111111111111
 		// 선택버튼 세팅
 		for(int i = 0 ; i <  Button.length; i++) 
 		{
@@ -135,6 +165,7 @@ public class DynamicBeat_Bingo_two extends JFrame {
 //		for(int i = 0; i < 9 ; i++) {
 //			Button[i].setIcon(nImage[i]);
 //		}
+		//1111111111111111111111111111111111111111111
 		Button[0].setIcon(n1Image);
 		Button[1].setIcon(n2Image);
 		Button[2].setIcon(n3Image);
@@ -145,15 +176,45 @@ public class DynamicBeat_Bingo_two extends JFrame {
 		Button[7].setIcon(n8Image);
 		Button[8].setIcon(n9Image);
 	//2222222222222222222222222222222222222222222222222222222222222222222222222222222222	
-		Button2[0].setIcon(n1Image);
-		Button2[1].setIcon(n2Image);
-		Button2[2].setIcon(n3Image);
-		Button2[3].setIcon(n4Image);
-		Button2[4].setIcon(n5Image);
-		Button2[5].setIcon(n6Image);
-		Button2[6].setIcon(n7Image);
-		Button2[7].setIcon(n8Image);
-		Button2[8].setIcon(n9Image);
+		Button2[0].setIcon(n1Image2);
+		Button2[1].setIcon(n2Image2);
+		Button2[2].setIcon(n3Image2);
+		Button2[3].setIcon(n4Image2);
+		Button2[4].setIcon(n5Image2);
+		Button2[5].setIcon(n6Image2);
+		Button2[6].setIcon(n7Image2);
+		Button2[7].setIcon(n8Image2);
+		Button2[8].setIcon(n9Image2);
+		// 어게인 버튼
+		againButton.setBounds(562, 600, 150, 50); 
+//		againButton.setBorderPainted(false);
+//		againButton.setContentAreaFilled(false);
+//		againButton.setFocusPainted(false);
+		againButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				againButton.setIcon(againButtonImage);
+				againButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				againButton.setIcon(againButtonImage);
+				againButton.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+			}
+			@Override
+			public void mousePressed(MouseEvent e) {
+				try {
+					Thread.sleep(1000);
+				}catch(InterruptedException ex) {
+					ex.printStackTrace();
+				}
+				//System.exit(0);
+				new DynamicBeat_Bingo_two();
+				dispose();
+			}
+		});
+		againButton.setIcon(againButtonImage);
+		add(againButton);
 	
 		// 삭제버튼 세팅 및 동작
 		
@@ -179,7 +240,6 @@ public class DynamicBeat_Bingo_two extends JFrame {
 				}catch(InterruptedException ex) {
 					ex.printStackTrace();
 				}
-//				System.exit(0);
 				new GamePlay();
 				dispose();
 			}
@@ -275,7 +335,7 @@ public class DynamicBeat_Bingo_two extends JFrame {
 				button2[i][j] = new JButton(Integer.toString(two2[i][j]));
 				button2[i][j].setBounds(810+130*j, 175+130*i, 125,125);
 				
-				button2[i][j].setIcon(bingoImage);
+				button2[i][j].setIcon(bingoImage2);
 			
 //				button[i][j].setStyle("-fx-font-size :30;");
 				button2[i][j].setBorderPainted(true);
@@ -1097,8 +1157,8 @@ public class DynamicBeat_Bingo_two extends JFrame {
 			if (count >= winCnt )
 			{
 				System.out.println("축하합니다. ");
+				winBingo2.setVisible(false);
 				winBingo.setVisible(true);
-	//			winBingo2.setVisible(true);
 				return;
 			}
 			break;
@@ -1157,7 +1217,7 @@ public class DynamicBeat_Bingo_two extends JFrame {
 			if (count >= winCnt )
 			{
 				System.out.println("축하합니다. ");
-			//	winBingo.setVisible(true);
+				winBingo.setVisible(false);
 				winBingo2.setVisible(true);
 				return;
 			}
