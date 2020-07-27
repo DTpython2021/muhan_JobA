@@ -15,7 +15,7 @@ public class SlotMusic extends Applet implements Runnable {
 //		while (true) {
 			try {
 //				URL url = new URL("file:///D:/abc/MySources/image/ImageSlot/projector.wav");
-				URL url = new URL("file:///C:/Users/KIM HYUNJI/git/test01/src/music/projector.wav");
+				URL url = new URL("file:///C:/Users/user/git/muhan_JobA/src/music/projector.wav");
 				sound = Applet.newAudioClip(url);
 				sound.play();
 //				System.out.println("Thread2" + Thread.interrupted());

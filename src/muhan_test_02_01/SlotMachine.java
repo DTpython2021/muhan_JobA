@@ -58,10 +58,10 @@ public class SlotMachine extends Applet implements Runnable, ActionListener {
 		// 이미지 로드
 		MediaTracker tracker = new MediaTracker(this);
 		
-		slot = Toolkit.getDefaultToolkit().getImage("C:\\Users\\KIM HYUNJI\\git\\test01\\src\\image\\slotsymbol7777.png");
+		slot = Toolkit.getDefaultToolkit().getImage("C:\\Users\\user\\git\\muhan_JobA\\src\\image\\slotsymbol7777.png");
 		tracker.addImage(slot,  0);
 		
-		machine = Toolkit.getDefaultToolkit().getImage("C:\\Users\\KIM HYUNJI\\git\\test01\\src\\image\\slotmachine_200721.png"); //투명한 이미지 사용할 것!
+		machine = Toolkit.getDefaultToolkit().getImage("C:\\Users\\user\\git\\muhan_JobA\\src\\image\\slotmachine_200721.png"); //투명한 이미지 사용할 것!
 		tracker.addImage(machine, 0);
 
 //		// 배경 음악

@@ -115,7 +115,7 @@ public class GamePlay extends JFrame {
 				Button4.setVisible(false);
 				quitButton.setVisible(false);
 				Background = new ImageIcon(Main.class.getResource("../image/mainBackground.jpg")).getImage(); 
-				new DynamicBeat_Bingo();
+				new DynamicBeat_Bingo_two();
 				dispose();
 			}
 		});
