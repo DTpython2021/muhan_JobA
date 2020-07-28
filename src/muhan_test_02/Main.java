@@ -1,5 +1,7 @@
 package muhan_test_02;
 
+//2020-07-28
+
 public class Main {
 	public static final int SCREEN_WIDTH = 1280;
 	public static final int SCREEN_HEIGHT = 720;
